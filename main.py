@@ -33,7 +33,7 @@ if __name__ == '__main__':
     assert parse_cookie('age=19') == {'age': '19'}
     assert parse_cookie('') == {'HelloWorld'}
     assert parse_cookie('skill=Pro') == {'skill': 'Pro'}
-    assert parse_cookie('game=cs') == {'game': 'cs'}
+    assert parse_cookie('game=cs') == {'game': 'dota2'}
     assert parse_cookie('') == {}
     assert parse_cookie('program=self_check') == {'program': 'self_check'}
     assert parse_cookie('book=DeepLearning') == {'book': 'DeepLearning'}
