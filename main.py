@@ -28,3 +28,13 @@ if __name__ == '__main__':
     assert parse_cookie('') == {}
     assert parse_cookie('name=Dima;age=28;') == {'name': 'Dima', 'age': '28'}
     assert parse_cookie('name=Dima=User;age=28;') == {'name': 'Dima=User', 'age': '28'}
+    assert parse_cookie('age=29') == {'age': '29'}
+    assert parse_cookie('name=Rodion') == {'name': 'Rodion'}
+    assert parse_cookie('age=19') == {'age': '19'}
+    assert parse_cookie('') == {'HelloWorld'}
+    assert parse_cookie('skill=Pro') == {'skill': 'Pro'}
+    assert parse_cookie('game=cs') == {'game': 'cs'}
+    assert parse_cookie('') == {}
+    assert parse_cookie('program=self_check') == {'program': 'self_check'}
+    assert parse_cookie('book=DeepLearning') == {'book': 'DeepLearning'}
+    assert parse_cookie('author=Francois_Chollet') == {'author': 'Francois_Chollet'}
