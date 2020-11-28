@@ -8,7 +8,16 @@ if __name__ == '__main__':
     assert parse('http://example.com/') == {}
     assert parse('http://example.com/?') == {}
     assert parse('http://example.com/?name=Dima') == {'name': 'Dima'}
-
+    assert parse('http://example.com/?age=29') == {'age': '29'}
+    assert parse('http://example.com/?name=Rodion') == {'name': 'Rodion'}
+    assert parse('http://example.com/?age=19') == {'age': '19'}
+    assert parse('http://example.com/?') == {'HelloWorld'}
+    assert parse('http://example.com/?skill=Pro') == {'skill': 'Pro'}
+    assert parse('http://example.com/?game=cs') == {'game': 'cs'}
+    assert parse('http://example.com/') == {}
+    assert parse('http://example.com/?program=self_check') == {'program': 'self_check'}
+    assert parse('http://example.com/?book=DeepLearning') == {'book': 'DeepLearning'}
+    assert parse('http://example.com/?author=Francois_Chollet') == {'author': 'Francois_Chollet'} 
 
 def parse_cookie(query: str) -> dict:
     return {}
